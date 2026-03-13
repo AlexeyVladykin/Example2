@@ -23,5 +23,31 @@ namespace Testing
         {
             InitializeComponent();
         }
+
+
+        private bool Validator()
+        {
+            if (password.Text.Length == 0 || passwordAgain.Text.Length == 0 || login.Text.Length == 0) 
+            {
+                MessageBox.Show("Все поля должны быть заполнены!");
+                return false;
+            }
+            if(password.Text != passwordAgain.Text)
+            {
+                MessageBox.Show("Пароли не совпадают");
+                return false;
+            }
+            return true;
+        }
+
+        private void Button_Click_Reg(object sender, RoutedEventArgs e)
+        {
+            if(Validator())
+            {
+                MessageBox.Show("Вы зарегистрированы!");
+            }
+        }
+
+
     }
 }
