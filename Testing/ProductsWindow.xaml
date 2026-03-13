@@ -10,7 +10,7 @@
 
         <!-- Таблица с товарами -->
         <ScrollViewer VerticalScrollBarVisibility="Auto">
-            <DataGrid x:Name="dgProducts" AutoGenerateColumns="False" CanUserResizeRows="False">
+            <DataGrid x:Name="dgProducts" AutoGenerateColumns="False" CanUserResizeRows="False" Width="438">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID" Binding="{Binding Id}" />
                     <DataGridTextColumn Header="Название" Binding="{Binding Name}" />

@@ -13,5 +13,13 @@ namespace Testing
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+
+            // Создание экземпляра вашего окна и его отображение
+            var mainWindow = new ProductsWindow();
+            mainWindow.Show();
+        }
     }
 }
